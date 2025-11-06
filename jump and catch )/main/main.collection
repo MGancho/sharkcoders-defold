@@ -1,0 +1,114 @@
+name: "main"
+instances {
+  id: "floor"
+  prototype: "/main/floor.go"
+  position {
+    x: 349.20355
+    y: 229.20023
+  }
+}
+instances {
+  id: "floor1"
+  prototype: "/main/floor.go"
+  position {
+    x: 841.20355
+    y: 229.20023
+  }
+}
+instances {
+  id: "floor2"
+  prototype: "/main/floor.go"
+  position {
+    x: 1345.2035
+    y: 229.20023
+  }
+}
+instances {
+  id: "floor3"
+  prototype: "/main/floor.go"
+  position {
+    x: 1844.2035
+    y: 229.20023
+  }
+}
+instances {
+  id: "floor4"
+  prototype: "/main/floor.go"
+  position {
+    x: 2350.2036
+    y: 229.20023
+  }
+}
+instances {
+  id: "floor5"
+  prototype: "/main/floor.go"
+  position {
+    x: 2854.2036
+    y: 229.20023
+  }
+}
+instances {
+  id: "floor6"
+  prototype: "/main/floor.go"
+  position {
+    x: 3359.2036
+    y: 229.20023
+  }
+}
+instances {
+  id: "floor7"
+  prototype: "/main/floor.go"
+  position {
+    x: 3865.2036
+    y: 229.20023
+  }
+}
+instances {
+  id: "floor8"
+  prototype: "/main/floor.go"
+  position {
+    x: 4369.2036
+    y: 229.20023
+  }
+}
+instances {
+  id: "floor9"
+  prototype: "/main/floor.go"
+  position {
+    x: 4868.2036
+    y: 229.20023
+  }
+}
+instances {
+  id: "floor10"
+  prototype: "/main/floor.go"
+  position {
+    x: 5374.2036
+    y: 229.20023
+  }
+}
+instances {
+  id: "floor11"
+  prototype: "/main/floor.go"
+  position {
+    x: 5878.2036
+    y: 229.20023
+  }
+}
+instances {
+  id: "player"
+  prototype: "/main/player.go"
+  position {
+    x: 482.16095
+    y: 523.8038
+  }
+}
+instances {
+  id: "enemy"
+  prototype: "/main/enemy.go"
+  position {
+    x: 1615.3853
+    y: 528.7836
+  }
+}
+scale_along_z: 0

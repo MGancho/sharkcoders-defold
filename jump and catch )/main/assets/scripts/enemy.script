@@ -1,0 +1,10 @@
+go.property("speed", 500)
+
+function init(self)
+	self.input = {
+		left = false,
+		right = false
+	}
+	self.vel = vmath.vector3(0,0,0)
+	self.grounded = true
+end
