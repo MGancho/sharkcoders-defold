@@ -1,8 +1,8 @@
-go. property("speed", 400)--propriedade de velocidade
+go.property("speed", 400)--propriedade de velocidade
 
 function init(self)
 
-	self.vida = 5
+	self.vida = 5 -- self significa atributo que damos ao que está associado ao script 
 	self.iframes = false
 	self.time_iframes = 1.0 --segundos de invencibilidade
 	self.timer_iframes = 0
@@ -12,8 +12,8 @@ function init(self)
 	}
 	
 	self.vel = vmath.vector3(0,0,0)
-	self.gravidade = -1000
-	self.forca_pulo = 900
+	self.gravidade = -2000
+	self.forca_pulo = 1500
 	self.grounded = false --o pulo
 
 	msg.post(".", "acquire_input_focus")
@@ -64,7 +64,7 @@ function on_input(self, action_id, action)
 		if action.pressed then
 			self.input.right = true --ativa o movimento para a direita
 		elseif action.released then
-			self.input.right = false --desativa o movimetno para a direita
+			self.input.right = false --desativa o movimento para a direita
 		end
 	end
 		--input do espaço
@@ -88,6 +88,19 @@ function on_message(self, message_id, message, sender)
 				local position = go.get_position() 
 				position.y = position.y + message.distance
 				go.set_position(position)
+			end
+
+		elseif message.other_group == hash("enemy") then
+			if not self.iframes then
+				self.vida = self.vida - 1
+				print("vida:".. self.vida)
+
+				self.invencivel = true
+				self.timer_iframes = self.time_iframes
+
+				if self.vida <= 0  then
+					reset_game(self)
+				 end
 			end
 		end
 	end

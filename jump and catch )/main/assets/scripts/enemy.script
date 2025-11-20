@@ -1,6 +1,6 @@
-go.property("speed", 200)
+go.property("speed", 400)
 go.property("left_limit", 1010) -- pode mudar dependendo de onde 
-go.property("right_limit", 1760) -- queremos que ele fique a andar (> <)
+go.property("right_limit", 2100) -- queremos que ele fique a andar (> <)
 function init(self)
 	self.dir = 1 --começa a andar para a direita
 	self.grounded = true -- para não cair pelo mapa
