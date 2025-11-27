@@ -2,9 +2,9 @@ go.property("speed", 400)--propriedade de velocidade
 
 function init(self)
 
-	self.vida = 5 -- self significa atributo que damos ao que está associado ao script 
+	self.vida = 3 -- self significa atributo que damos ao que está associado ao script 
 	self.iframes = false
-	self.time_iframes = 1.0 --segundos de invencibilidade
+	self.time_iframes = 5.0 --segundos de invencibilidade
 	self.timer_iframes = 0
 	self.input = {
 		left = false,
@@ -42,7 +42,7 @@ function update(self, dt)
 
 	-- COMBATE: VIDA
 	if self.iframes == true then
-		self.timer_iframes = self.time_iframes - dt
+		self.timer_iframes = self.timer_iframes - dt
 		if self.timer_iframes <= 0 then
 			self.iframes = false
 			self.timer_iframes = 0
@@ -75,7 +75,21 @@ function on_input(self, action_id, action)
 		end
 	end
 end
+function reset_game(self)
+	--reset de variáveis do player
+	self.vida = 3
+	self.vel = vmath.vector3(0, 0, 0)
+	self.input.left = false
+	self.input.right = false
+	self.grounded = false
 
+	--reset da invencibilidade
+	self.iframes = false 
+	self.timer_iframes = 0
+	self.time_iframes = 5.0
+	-- reset player position
+	go.set_position(vmath.vector3(200, 200, 0))
+end
 function on_message(self, message_id, message, sender)
 	if message_id == hash("contact_point_response") then
 		if message.group == hash("ground") then 
@@ -95,7 +109,7 @@ function on_message(self, message_id, message, sender)
 				self.vida = self.vida - 1
 				print("vida:".. self.vida)
 
-				self.invencivel = true
+				self.iframes = true
 				self.timer_iframes = self.time_iframes
 
 				if self.vida <= 0  then
