@@ -111,4 +111,33 @@ instances {
     y: 229.20023
   }
 }
+instances {
+  id: "life"
+  prototype: "/main/life.go"
+  position {
+    x: 0.584976
+    y: -18.829002
+  }
+}
+instances {
+  id: "item"
+  prototype: "/main/item.go"
+  position {
+    x: 2472.7166
+    y: 444.47485
+  }
+  scale3 {
+    x: 0.56
+    y: 0.56
+    z: 0.56
+  }
+}
+instances {
+  id: "text_item"
+  prototype: "/main/text_item.go"
+  position {
+    x: -1.340206
+    y: -20.82336
+  }
+}
 scale_along_z: 0

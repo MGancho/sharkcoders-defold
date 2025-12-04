@@ -1,0 +1,11 @@
+function init(self)
+	gui.set_text(gui.get_node("life"), "LIVES: 3")
+end
+
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("update_item") then
+		gui.set_text(gui.get_node("item"), " GET WINGS ")
+	end
+end
+
