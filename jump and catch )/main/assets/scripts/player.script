@@ -4,7 +4,7 @@ function init(self)
 
 	self.life = 3 -- self significa atributo que damos ao que está associado ao script 
 	self.iframes = false
-	self.time_iframes = 5.0 --segundos de invencibilidade
+	self.time_iframes = 2.0 --segundos de invencibilidade
 	self.timer_iframes = 0
 	self.input = {
 		left = false,
@@ -86,11 +86,12 @@ function reset_game(self)
 	--reset da invencibilidade
 	self.iframes = false 
 	self.timer_iframes = 0
-	self.time_iframes = 5.0
+	self.time_iframes = 2.0
 	-- reset player position
 	go.set_position(vmath.vector3(200, 200, 0))
 	--reset do texto das vidas
 	msg.post("main:/life#life", "update_life", { value = self.life })
+	msg.post("main:/life#life", "update_text", "GET WINGS")
 end
 function on_message(self, message_id, message, sender)
 	if message_id == hash("contact_point_response") then
@@ -116,8 +117,15 @@ function on_message(self, message_id, message, sender)
 
 				if self.life <= 0  then
 					reset_game(self)
-				 end
+				end
 			end
+		end
+	elseif message_id == hash("trigger_response") then
+		if message.enter and message.other_group == hash("item") then
+					--apaga o item
+			go.delete(message.other_id)
+					-- atualiza o texto
+			msg.post("main:/life#life", "update_text", "YOU GOT WINGS :D")
 		end
 	end
 end

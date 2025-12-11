@@ -132,12 +132,4 @@ instances {
     z: 0.56
   }
 }
-instances {
-  id: "text_item"
-  prototype: "/main/text_item.go"
-  position {
-    x: -1.340206
-    y: -20.82336
-  }
-}
 scale_along_z: 0
