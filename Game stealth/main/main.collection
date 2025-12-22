@@ -1,0 +1,80 @@
+name: "main"
+instances {
+  id: "player"
+  prototype: "/main/player/player.go"
+  position {
+    x: 560.0
+    y: 88.0
+  }
+}
+instances {
+  id: "enemy"
+  prototype: "/main/enemies/enemy.go"
+  position {
+    x: 571.0
+    y: 248.0
+  }
+}
+instances {
+  id: "object"
+  prototype: "/main/maps/object.go"
+  position {
+    x: 391.0
+    y: 209.0
+  }
+}
+instances {
+  id: "object1"
+  prototype: "/main/maps/object.go"
+  position {
+    x: 714.0
+    y: 386.0
+  }
+}
+instances {
+  id: "object2"
+  prototype: "/main/maps/object.go"
+  position {
+    x: 468.0
+    y: 396.0
+  }
+}
+instances {
+  id: "object3"
+  prototype: "/main/maps/object.go"
+  position {
+    x: 743.0
+    y: 196.0
+  }
+}
+instances {
+  id: "object4"
+  prototype: "/main/maps/object.go"
+  position {
+    x: 215.0
+    y: 253.0
+  }
+}
+instances {
+  id: "wall20"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 369.0
+    y: -12.0
+  }
+  scale3 {
+    x: 0.773333
+    y: 0.773333
+    z: 0.773333
+  }
+}
+instances {
+  id: "background"
+  prototype: "/main/maps/background.go"
+  position {
+    x: 473.0
+    y: 323.0
+    z: -8.0
+  }
+}
+scale_along_z: 0

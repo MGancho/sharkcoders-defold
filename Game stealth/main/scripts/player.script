@@ -1,0 +1,66 @@
+go.property("speed", 400)--propriedade de velocidade
+
+function init(self)
+	self.vel =  vmath.vector3(0,0,0)
+	self.input = {
+		up = false,
+		down = false,
+		left = false,
+		right = false	-- a direção
+	}
+	msg.post(".", "acquire_input_focus")
+end
+
+
+function update(self, dt)
+	-- Atualiza a direção com base nas teclas premidas
+	local dir = vmath.vector3(0,0,0)
+	if self.input.left then dir.x = dir.x - 1 end
+	if self.input.right then dir.x = dir.x + 1 end
+	if self.input.up then dir.y = dir.y + 1 end
+	if self.input.up then dir.y = dir.y - 1 end
+
+	-- Se houver movimento (dir ≠ 0), normaliza e atualiza a posição
+	if dir.x ~= 0 or dir.y ~= 0 then
+		dir = vmath.normalize(dir) -- normaliza para manter velocidade constante
+		go.set_position(go.get_position() + dir * self.speed * dt) -- move o objeto
+	end
+
+	
+end
+
+
+function on_input(self, action_id, action)
+	--input da tecla "left"
+	if action_id == hash("left") then
+		if action.pressed then
+			self.input.left = true --ativa o movimento para a esquerda
+		elseif action.released then
+			self.input.left = false --desativa o movimetno para a esquerda
+		end
+	end
+	--input da tecla "right"
+	if action_id == hash("right") then
+		if action.pressed then
+			self.input.right = true --ativa o movimento para a direita
+		elseif action.released then
+			self.input.right = false --desativa o movimento para a direita
+		end
+	end
+	--input da tecla "up"
+	if action_id == hash("up") then
+		if action.pressed then
+			self.input.right = true --ativa o movimento para a direita
+		elseif action.released then
+			self.input.right = false --desativa o movimento para a direita
+		end
+	end
+	--input da tecla "down"
+	if action_id == hash("down") then
+		if action.pressed then
+			self.input.right = true --ativa o movimento para a direita
+		elseif action.released then
+			self.input.right = false --desativa o movimento para a direita
+		end
+	end
+end

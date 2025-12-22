@@ -1,0 +1,18 @@
+images {
+  image: "/main/assets/ace.png"
+}
+images {
+  image: "/main/assets/enemyy.png"
+}
+images {
+  image: "/main/assets/pawn.png"
+}
+images {
+  image: "/main/assets/wall.png"
+  pivot_x: 0.721533
+  pivot_y: 0.572337
+}
+images {
+  image: "/main/assets/backgroun.png"
+}
+extrude_borders: 2
