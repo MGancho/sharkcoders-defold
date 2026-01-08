@@ -3,64 +3,64 @@ instances {
   id: "player"
   prototype: "/main/player/player.go"
   position {
-    x: 560.0
-    y: 88.0
+    x: 627.0
+    y: 75.0
   }
 }
 instances {
   id: "enemy"
   prototype: "/main/enemies/enemy.go"
   position {
-    x: 571.0
-    y: 248.0
+    x: 60.0
+    y: 574.0
   }
 }
 instances {
   id: "object"
-  prototype: "/main/maps/object.go"
+  prototype: "/main/objects/ace_card.go"
   position {
-    x: 391.0
-    y: 209.0
+    x: 83.0
+    y: 112.0
   }
 }
 instances {
   id: "object1"
-  prototype: "/main/maps/object.go"
+  prototype: "/main/objects/ace_card.go"
   position {
-    x: 714.0
-    y: 386.0
+    x: 472.0
+    y: 76.0
   }
 }
 instances {
   id: "object2"
-  prototype: "/main/maps/object.go"
+  prototype: "/main/objects/ace_card.go"
   position {
-    x: 468.0
-    y: 396.0
+    x: 247.0
+    y: 504.0
   }
 }
 instances {
   id: "object3"
-  prototype: "/main/maps/object.go"
+  prototype: "/main/objects/ace_card.go"
   position {
-    x: 743.0
-    y: 196.0
+    x: 866.0
+    y: 87.0
   }
 }
 instances {
   id: "object4"
-  prototype: "/main/maps/object.go"
+  prototype: "/main/objects/ace_card.go"
   position {
-    x: 215.0
-    y: 253.0
+    x: 858.0
+    y: 535.0
   }
 }
 instances {
   id: "wall20"
   prototype: "/main/maps/wall.go"
   position {
-    x: 369.0
-    y: -12.0
+    x: 366.0
+    y: 44.0
   }
   scale3 {
     x: 0.773333
@@ -75,6 +75,92 @@ instances {
     x: 473.0
     y: 323.0
     z: -8.0
+  }
+}
+instances {
+  id: "wall"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 366.0
+    y: 142.0
+  }
+  scale3 {
+    x: 0.773333
+    y: 0.773333
+    z: 0.773333
+  }
+}
+instances {
+  id: "wall1"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 366.0
+    y: 241.0
+  }
+  scale3 {
+    x: 0.773333
+    y: 0.773333
+    z: 0.773333
+  }
+}
+instances {
+  id: "door1"
+  prototype: "/main/maps/door.go"
+  position {
+    x: 230.80518
+    y: 578.86847
+  }
+}
+instances {
+  id: "wall2"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 366.0
+    y: 339.0
+  }
+  scale3 {
+    x: 0.773333
+    y: 0.773333
+    z: 0.773333
+  }
+}
+instances {
+  id: "wall3"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 267.0
+    y: 241.0
+  }
+  scale3 {
+    x: 0.773333
+    y: 0.773333
+    z: 0.773333
+  }
+}
+instances {
+  id: "wall4"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 366.0
+    y: 586.0
+  }
+  scale3 {
+    x: 0.773333
+    y: 0.773333
+    z: 0.773333
+  }
+}
+instances {
+  id: "wall5"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 464.0
+    y: 586.0
+  }
+  scale3 {
+    x: 0.773333
+    y: 0.773333
+    z: 0.773333
   }
 }
 scale_along_z: 0

@@ -1,4 +1,4 @@
-go.property("speed", 400)--propriedade de velocidade
+go.property("speed", 200)--propriedade de velocidade
 
 function init(self)
 	self.vel =  vmath.vector3(0,0,0)
@@ -18,7 +18,7 @@ function update(self, dt)
 	if self.input.left then dir.x = dir.x - 1 end
 	if self.input.right then dir.x = dir.x + 1 end
 	if self.input.up then dir.y = dir.y + 1 end
-	if self.input.up then dir.y = dir.y - 1 end
+	if self.input.down then dir.y = dir.y - 1 end
 
 	-- Se houver movimento (dir ≠ 0), normaliza e atualiza a posição
 	if dir.x ~= 0 or dir.y ~= 0 then
@@ -50,17 +50,17 @@ function on_input(self, action_id, action)
 	--input da tecla "up"
 	if action_id == hash("up") then
 		if action.pressed then
-			self.input.right = true --ativa o movimento para a direita
+			self.input.up = true --ativa o movimento para a direita
 		elseif action.released then
-			self.input.right = false --desativa o movimento para a direita
+			self.input.up = false --desativa o movimento para a direita
 		end
 	end
 	--input da tecla "down"
 	if action_id == hash("down") then
 		if action.pressed then
-			self.input.right = true --ativa o movimento para a direita
+			self.input.down = true --ativa o movimento para a direita
 		elseif action.released then
-			self.input.right = false --desativa o movimento para a direita
+			self.input.down = false --desativa o movimento para a direita
 		end
 	end
 end

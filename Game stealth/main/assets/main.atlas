@@ -15,4 +15,7 @@ images {
 images {
   image: "/main/assets/backgroun.png"
 }
+images {
+  image: "/main/assets/door.png"
+}
 extrude_borders: 2
