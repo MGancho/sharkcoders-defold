@@ -2,23 +2,44 @@ fonts {
   name: "always_on_top"
   font: "/builtins/fonts/debug/always_on_top.font"
 }
+fonts {
+  name: "default"
+  font: "/builtins/fonts/default.font"
+}
 nodes {
   position {
-    x: 246.0
-    y: 488.0
+    x: 882.0
+    y: 49.0
   }
   scale {
-    x: 2.56
-    y: 2.56
-    z: 2.56
+    x: 1.160533
+    y: 1.160533
+    z: 1.160533
   }
   size {
     x: 200.0
     y: 100.0
   }
   type: TYPE_TEXT
+  text: "Get aces \n"
+  "Get out of zone"
   font: "always_on_top"
-  id: "text"
+  id: "missions"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 880.0
+    y: 15.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "0 points"
+  font: "default"
+  id: "points"
   inherit_alpha: true
 }
 material: "/builtins/materials/gui.material"
