@@ -11,16 +11,16 @@ instances {
   id: "object"
   prototype: "/main/objects/ace_card.go"
   position {
-    x: 731.0
-    y: 407.0
+    x: 871.0
+    y: 547.0
   }
 }
 instances {
   id: "object1"
   prototype: "/main/objects/ace_card.go"
   position {
-    x: 895.0
-    y: 564.0
+    x: 688.0
+    y: 74.0
   }
 }
 instances {
@@ -35,16 +35,16 @@ instances {
   id: "object3"
   prototype: "/main/objects/ace_card.go"
   position {
-    x: -9.0
-    y: 575.0
+    x: 51.0
+    y: 484.0
   }
 }
 instances {
   id: "object4"
   prototype: "/main/objects/ace_card.go"
   position {
-    x: 462.0
-    y: 246.0
+    x: 545.0
+    y: 553.0
   }
 }
 instances {
@@ -606,6 +606,14 @@ instances {
   position {
     x: 342.0
     y: 443.0
+  }
+}
+instances {
+  id: "enemy"
+  prototype: "/main/enemies/enemy.go"
+  position {
+    x: 614.0
+    y: 343.0
   }
 }
 scale_along_z: 0
