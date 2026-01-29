@@ -86,6 +86,23 @@ function finished_mission(self, index)
 end
 
 function on_message(self, message_id, message, sender)
+	if message_id == hash("contact_point_response") then
+		if message.normal.y > 0.1 then
+			self.input.down = false 
+		end
+		if message.normal.y < 0.1 then
+			self.input.up = false
+		end
+		if message.normal.x > 0.1 then
+			self.input.left = false 
+		end
+		if message.normal.x < 0.1 then
+			self.input.right = false
+		end
+		local pos = go.get_position()
+		go.set_position(vmath.vector3(pos.x, pos.y, 0))
+	end
+
 	if message_id == hash("trigger_response") and message.enter then
 		--colisão com o objeto
 		if message.other_group == hash("ace") then
@@ -100,6 +117,9 @@ function on_message(self, message_id, message, sender)
 			if self.missions[1].finished then
 				finished_mission(self,2) -- missão 2 concluída
 			end
+		end
+		if message.other_group == hash("enemy") then
+			print("jogador detectado")
 		end
 	end
 end

@@ -2,6 +2,10 @@ components {
   id: "Player"
   component: "/main/scripts/player.script"
 }
+components {
+  id: "fx"
+  component: "/main/sounds/fx.sound"
+}
 embedded_components {
   id: "player"
   type: "sprite"
