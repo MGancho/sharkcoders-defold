@@ -6,6 +6,10 @@ components {
   id: "fx"
   component: "/main/sounds/fx.sound"
 }
+components {
+  id: "footsteps"
+  component: "/main/sounds/footsteps.sound"
+}
 embedded_components {
   id: "player"
   type: "sprite"

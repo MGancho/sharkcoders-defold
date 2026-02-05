@@ -2,9 +2,6 @@ images {
   image: "/main/assets/ace.png"
 }
 images {
-  image: "/main/assets/enemyy.png"
-}
-images {
   image: "/main/assets/pawn.png"
 }
 images {
@@ -17,5 +14,8 @@ images {
 }
 images {
   image: "/main/assets/door.png"
+}
+images {
+  image: "/main/assets/enemyy2.0.png"
 }
 extrude_borders: 2

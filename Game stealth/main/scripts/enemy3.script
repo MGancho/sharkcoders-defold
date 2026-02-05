@@ -1,0 +1,24 @@
+go.property("speed", 20) -- pode ser alterado
+go.property("top_limit", 500) -- depende de onde é que eu quero que vá, ou seja, da posição (Y)
+go.property("bottom_limit", 110) -- depende de onde é que eu quero que vá, ou seja, da posição (Y)
+go.property("left_limit", 6) -- depende de onde é que eu quero que vá, ou seja, da posição (X)
+go.property("right_limit", 700) -- depende de onde é que eu quero que vá, ou seja, da posição (X)
+function init(self)
+	self.dir = 1
+	go.set(".", "scale.y", go.get(".", "scale.y") * -1) -- troca de direção
+end
+
+function update(self, dt)
+	local pos = go.get_position()
+	pos.y = pos.y + self.speed * self.dir * dt
+	if pos.y >= self.top_limit then
+		pos.y = self.top_limit
+		self.dir = -1
+		go.set(".", "scale.y", go.get(".", "scale.y") * -1) -- troca de direção
+	elseif  pos.y <= self.bottom_limit then
+		pos.y = self.bottom_limit
+		self.dir = 1
+		go.set(".", "scale.y", go.get(".", "scale.y") * -1) -- troca de direção
+	end
+	go.set_position(pos)
+end

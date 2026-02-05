@@ -3,8 +3,8 @@ instances {
   id: "player"
   prototype: "/main/player/player.go"
   position {
-    x: 345.0
-    y: 261.0
+    x: 339.0
+    y: 124.0
   }
 }
 instances {
@@ -220,7 +220,7 @@ instances {
   prototype: "/main/maps/wall.go"
   position {
     x: 773.0
-    y: 419.0
+    y: 367.0
   }
   scale3 {
     x: 0.773333
@@ -233,7 +233,7 @@ instances {
   prototype: "/main/maps/wall.go"
   position {
     x: 773.0
-    y: 322.0
+    y: 268.0
   }
   scale3 {
     x: 0.773333
@@ -593,27 +593,24 @@ instances {
   }
 }
 instances {
-  id: "enemy4"
-  prototype: "/main/enemies/enemy.go"
+  id: "enemy1"
+  prototype: "/main/enemies/enemy1.go"
   position {
-    x: 855.0
-    y: 192.0
+    x: 80.0
+    y: 177.0
   }
 }
 instances {
-  id: "enemy5"
-  prototype: "/main/enemies/enemy.go"
+  id: "wall38"
+  prototype: "/main/maps/wall.go"
   position {
-    x: 342.0
-    y: 443.0
+    x: 773.0
+    y: 417.0
   }
-}
-instances {
-  id: "enemy"
-  prototype: "/main/enemies/enemy.go"
-  position {
-    x: 614.0
-    y: 343.0
+  scale3 {
+    x: 0.773333
+    y: 0.773333
+    z: 0.773333
   }
 }
 scale_along_z: 0
