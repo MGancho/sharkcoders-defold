@@ -17,6 +17,9 @@ function init(self)
 	self.points = 0
 	self.aces_collected = 0
 	self.total_aces = 5
+	isSoundPlaying = false
+	wall_sound = false
+	enemy_attack = false
 	--missões e pontos no início
 	msg.post("/missions1#missions", "update_points", { value = self.points})
 	msg.post("/missions1#missions", "update_missions", { list = self.missions})
@@ -71,8 +74,12 @@ function on_input(self, action_id, action)
 		end
 	end
 	local move = self.input.left or self.input.right or self.input.down or self.input.up 
-	if move == true then
+	if move and not isSoundPlaying then
 		sound.play("#footsteps")
+		isSoundPlaying = true
+	elseif isSoundPlaying and not move then
+		sound.stop("#footsteps")
+		isSoundPlaying = false
 	end
 end 
 function finished_mission(self, index)
@@ -86,28 +93,26 @@ end
 
 function on_message(self, message_id, message, sender, action_id)
 	if message_id == hash("contact_point_response") then
+		sound.play("#bonk")
 		if message.normal.y > 0.1 then
 			self.input.down = false
 		end
 		if message.normal.y < 0.1 then
 			self.input.up = false
-			
+
 		end
 		if message.normal.x > 0.1 then
 			self.input.left = false
-			
+
 		end
 		if message.normal.x < 0.1 then
 			self.input.right = false
-			
 		end
 		local pos = go.get_position()
 		go.set_position(vmath.vector3(pos.x, pos.y, 0))
 	end
 
 	if message_id == hash("trigger_response") and message.enter then
-
-
 		--colisão com o objeto
 		if message.other_group == hash("ace") then
 			go.delete(message.other_id)
@@ -127,5 +132,5 @@ function on_message(self, message_id, message, sender, action_id)
 			print("jogador detectado")
 			sound.play("#fx")
 		end
+		end
 	end
-end

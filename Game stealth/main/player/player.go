@@ -10,6 +10,10 @@ components {
   id: "footsteps"
   component: "/main/sounds/footsteps.sound"
 }
+components {
+  id: "bonk"
+  component: "/main/sounds/bonk.sound"
+}
 embedded_components {
   id: "player"
   type: "sprite"

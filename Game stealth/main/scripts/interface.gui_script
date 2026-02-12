@@ -11,5 +11,6 @@ function on_message(self, message_id, message, sender)
 		end
 
 		gui.set_text(gui.get_node("missions"), final_text)
+	elseif message_id == hash("flash_alerta")
 	end
 end

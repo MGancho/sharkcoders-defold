@@ -1,2 +1,3 @@
 sound: "/main/sounds/action_footsteps_plastic.ogg"
+looping: 1
 group: "player"
