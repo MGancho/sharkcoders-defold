@@ -131,6 +131,7 @@ function on_message(self, message_id, message, sender, action_id)
 		if message.other_group == hash("enemy") then
 			print("jogador detectado")
 			sound.play("#fx")
+			msg.post("main:/missions1", "flash_alerta")
 		end
 		end
 	end

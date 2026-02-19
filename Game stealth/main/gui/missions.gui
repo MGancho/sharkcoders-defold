@@ -45,24 +45,22 @@ nodes {
 }
 nodes {
   position {
-    x: 493.0
-    y: 315.0
+    x: 481.0
+    y: 317.0
   }
   scale {
-    x: 4.634209
-    y: 6.430195
-    z: 1.013333
+    x: 4.825121
+    y: 6.432726
   }
   size {
     x: 200.0
     y: 100.0
   }
-  type: TYPE_TEXT
-  text: "<text>"
-  font: "always_on_top"
+  type: TYPE_BOX
   id: "box"
   inherit_alpha: true
   alpha: 0.0
+  size_mode: SIZE_MODE_AUTO
 }
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT
