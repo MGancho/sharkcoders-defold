@@ -58,6 +58,29 @@ nodes {
   }
   type: TYPE_BOX
   id: "box"
+  alpha: 0.0
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 483.0
+    y: 318.0
+  }
+  scale {
+    x: 4.810419
+    y: 6.408602
+    z: 4.6
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  color {
+    x: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "bux"
   inherit_alpha: true
   alpha: 0.0
   size_mode: SIZE_MODE_AUTO

@@ -162,7 +162,7 @@ nodes {
     z: 0.4
   }
   type: TYPE_BOX
-  id: "Exit"
+  id: "Exit_"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
 }
@@ -179,8 +179,8 @@ nodes {
   text: "Exit\n"
   ""
   font: "always_on_top"
-  id: "Exit1"
-  parent: "Exit"
+  id: "Exit"
+  parent: "Exit_"
   inherit_alpha: true
   shadow_alpha: 0.0
   text_leading: 2.0

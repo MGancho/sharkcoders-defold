@@ -21,8 +21,8 @@ function init(self)
 	wall_sound = false
 	enemy_attack = false
 	--missões e pontos no início
-	msg.post("/missions1#missions", "update_points", { value = self.points})
-	msg.post("/missions1#missions", "update_missions", { list = self.missions})
+	msg.post("/missions#missions", "update_points", { value = self.points})
+	msg.post("/missions#missions", "update_missions", { list = self.missions})
 end
 
 
@@ -86,8 +86,8 @@ function finished_mission(self, index)
 	if not self.missions[index].finished then
 		self.missions[index].finished = true
 		self.points = self.points + self.missions[index].points
-		msg.post("/missions1#missions", "update_points", { value = self.points})
-		msg.post("/missions1#missions", "update_missions", { list = self.missions})
+		msg.post("/missions#missions", "update_points", { value = self.points})
+		msg.post("/missions#missions", "update_missions", { list = self.missions})
 	end
 end
 
@@ -125,13 +125,14 @@ function on_message(self, message_id, message, sender, action_id)
 		if message.other_group == hash("door") then
 			if self.missions[1].finished then
 				finished_mission(self,2) -- missão 2 concluída
+				msg.post("game:/missions", "flash_complete")
 			end
 		end
 		--colisão do inimigo
 		if message.other_group == hash("enemy") then
 			print("jogador detectado")
 			sound.play("#fx")
-			msg.post("main:/missions1", "flash_alerta")
+			msg.post("game:/missions", "flash_alerta")
 		end
 		end
 	end
