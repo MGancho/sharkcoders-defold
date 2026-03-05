@@ -1,6 +1,6 @@
-go.property("speed", 1500) -- pode ser alterado
+go.property("speed", 250) -- pode ser alterado
 go.property("top_limit", 500) -- depende de onde é que eu quero que vá, ou seja, da posição (Y)
-go.property("bottom_limit", 110) -- depende de onde é que eu quero que vá, ou seja, da posição (Y)
+go.property("bottom_limit", 70) -- depende de onde é que eu quero que vá, ou seja, da posição (Y)
 go.property("left_limit", 6) -- depende de onde é que eu quero que vá, ou seja, da posição (X)
 go.property("right_limit", 700) -- depende de onde é que eu quero que vá, ou seja, da posição (X)
 function init(self)

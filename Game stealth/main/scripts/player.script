@@ -1,4 +1,4 @@
-go.property("speed", 200)--propriedade de velocidade
+go.property("speed", 250)--propriedade de velocidade
 
 function init(self)
 	self.vel =  vmath.vector3(0,0,0)
@@ -16,7 +16,7 @@ function init(self)
 	}
 	self.points = 0
 	self.aces_collected = 0
-	self.total_aces = 5
+	self.total_aces = 4
 	isSoundPlaying = false
 	wall_sound = false
 	enemy_attack = false

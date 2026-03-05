@@ -1,24 +1,50 @@
-go.property("speed", 20) -- pode ser alterado
-go.property("top_limit", 500) -- depende de onde é que eu quero que vá, ou seja, da posição (Y)
-go.property("bottom_limit", 110) -- depende de onde é que eu quero que vá, ou seja, da posição (Y)
-go.property("left_limit", 6) -- depende de onde é que eu quero que vá, ou seja, da posição (X)
-go.property("right_limit", 700) -- depende de onde é que eu quero que vá, ou seja, da posição (X)
+go.property("speed", 200) -- pode ser alterado
+go.property("top_limit", 477) -- depende de onde é que eu quero que vá, ou seja, da posição (Y)
+go.property("bottom_limit", 150) -- depende de onde é que eu quero que vá, ou seja, da posição (Y)
+go.property("left_limit", 130) -- depende de onde é que eu quero que vá, ou seja, da posição (X)
+go.property("right_limit", 895) -- depende de onde é que eu quero que vá, ou seja, da posição (X)
 function init(self)
 	self.dir = 1
+	go.set(".", "scale.x", go.get(".", "scale.x") * -1) -- troca de direção
 	go.set(".", "scale.y", go.get(".", "scale.y") * -1) -- troca de direção
+	self.state = "down"
 end
 
 function update(self, dt)
 	local pos = go.get_position()
-	pos.y = pos.y + self.speed * self.dir * dt
-	if pos.y >= self.top_limit then
-		pos.y = self.top_limit
-		self.dir = -1
-		go.set(".", "scale.y", go.get(".", "scale.y") * -1) -- troca de direção
-	elseif  pos.y <= self.bottom_limit then
-		pos.y = self.bottom_limit
-		self.dir = 1
-		go.set(".", "scale.y", go.get(".", "scale.y") * -1) -- troca de direção
+
+	if self.state == "right" then
+		pos.x = pos.x + self.speed * dt
+		if pos.x >= self.right_limit then
+			pos.x = self.right_limit
+			self.state = "up"
+			go.set_rotation(vmath.quat_rotation_z(0))
+		end
+
+	elseif self.state == "up" then
+		pos.y = pos.y + self.speed * dt
+		if pos.y >= self.top_limit then
+			pos.y = self.top_limit
+			self.state = "left"
+			go.set_rotation(vmath.quat_rotation_z(math.pi/2))
+		end
+
+	elseif self.state == "left" then
+		pos.x = pos.x - self.speed * dt
+		if pos.x <= self.left_limit then
+			pos.x = self.left_limit
+			self.state = "down"
+			go.set_rotation(vmath.quat_rotation_z(math.pi))
+		end
+
+	elseif self.state == "down" then
+		pos.y = pos.y - self.speed * dt
+		if pos.y <= self.bottom_limit then
+			pos.y = self.bottom_limit
+			self.state = "right"
+			go.set_rotation(vmath.quat_rotation_z(-math.pi/2))
+		end
 	end
+
 	go.set_position(pos)
 end

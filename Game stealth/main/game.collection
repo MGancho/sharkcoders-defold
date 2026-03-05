@@ -1,26 +1,22 @@
 name: "game"
 instances {
-  id: "ace_card"
-  prototype: "/main/objects/ace_card.go"
-  position {
-    x: 72.635895
-    y: 95.31016
-  }
-}
-instances {
   id: "enemy1"
   prototype: "/main/enemies/enemy1.go"
   position {
-    x: 587.29865
-    y: 138.31354
+    x: 632.29865
+    y: 58.313538
+  }
+  rotation {
+    z: 0.99999976
+    w: 6.872892E-4
   }
 }
 instances {
   id: "player"
   prototype: "/main/player/player.go"
   position {
-    x: 284.34128
-    y: 154.86163
+    x: 127.34128
+    y: 490.86163
   }
 }
 instances {
@@ -28,14 +24,14 @@ instances {
   prototype: "/main/gui/missions.go"
   position {
     x: 1.828066
-    y: 4.433006
+    y: 0.433006
   }
 }
 instances {
   id: "door"
   prototype: "/main/maps/door.go"
   position {
-    x: 896.8904
+    x: 499.89038
     y: 576.472
   }
 }
@@ -43,32 +39,376 @@ instances {
   id: "ace_card1"
   prototype: "/main/objects/ace_card.go"
   position {
-    x: 63.050705
-    y: 592.6151
+    x: 387.05072
+    y: 303.6151
   }
 }
 instances {
   id: "ace_card2"
   prototype: "/main/objects/ace_card.go"
   position {
-    x: 43.070496
-    y: 426.46387
+    x: 643.0705
+    y: 309.46387
   }
 }
 instances {
   id: "ace_card3"
   prototype: "/main/objects/ace_card.go"
   position {
-    x: 52.534805
-    y: 295.0151
+    x: 895.5348
+    y: 309.0151
   }
 }
 instances {
   id: "ace_card4"
   prototype: "/main/objects/ace_card.go"
   position {
-    x: 207.11853
-    y: 591.5635
+    x: 129.11853
+    y: 298.56348
+  }
+}
+instances {
+  id: "wall"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 542.29285
+    y: 300.83868
+  }
+}
+instances {
+  id: "wall2"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 801.29285
+    y: 299.83868
+  }
+}
+instances {
+  id: "wall1"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 283.29282
+    y: 289.83868
+  }
+}
+instances {
+  id: "wall3"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 400.29282
+    y: 614.8387
+  }
+}
+instances {
+  id: "wall4"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 274.29282
+    y: 614.8387
+  }
+}
+instances {
+  id: "wall5"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 152.29282
+    y: 614.8387
+  }
+}
+instances {
+  id: "wall6"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 901.29285
+    y: 614.8387
+  }
+}
+instances {
+  id: "wall7"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 777.29285
+    y: 614.8387
+  }
+}
+instances {
+  id: "wall8"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 656.29285
+    y: 614.8387
+  }
+}
+instances {
+  id: "wall9"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 1028.2928
+    y: 614.8387
+  }
+}
+instances {
+  id: "wall10"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 25.292818
+    y: 590.8387
+  }
+}
+instances {
+  id: "wall11"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 25.292818
+    y: 469.83868
+  }
+}
+instances {
+  id: "wall12"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 25.292818
+    y: 350.83868
+  }
+}
+instances {
+  id: "wall13"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 25.292818
+    y: 229.83868
+  }
+}
+instances {
+  id: "wall14"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 25.292818
+    y: 108.838684
+  }
+}
+instances {
+  id: "wall15"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 25.292818
+    y: -10.161318
+  }
+}
+instances {
+  id: "wall16"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 1042.2928
+    y: 590.8387
+  }
+}
+instances {
+  id: "wall17"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 1042.2928
+    y: 469.83868
+  }
+}
+instances {
+  id: "wall18"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 1042.2928
+    y: 350.83868
+  }
+}
+instances {
+  id: "wall19"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 1042.2928
+    y: 229.83868
+  }
+}
+instances {
+  id: "wall20"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 1042.2928
+    y: 108.838684
+  }
+}
+instances {
+  id: "wall21"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 1042.2928
+    y: -10.161318
+  }
+}
+instances {
+  id: "wall22"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 925.29285
+    y: 3.838682
+  }
+}
+instances {
+  id: "wall23"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 898.29285
+    y: 3.838682
+  }
+}
+instances {
+  id: "wall24"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 816.29285
+    y: -58.16132
+  }
+}
+instances {
+  id: "wall25"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 789.29285
+    y: -58.16132
+  }
+}
+instances {
+  id: "wall26"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 816.29285
+    y: -58.16132
+  }
+}
+instances {
+  id: "wall27"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 789.29285
+    y: -58.16132
+  }
+}
+instances {
+  id: "wall28"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 701.29285
+    y: -58.16132
+  }
+}
+instances {
+  id: "wall29"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 674.29285
+    y: -58.16132
+  }
+}
+instances {
+  id: "wall30"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 556.29285
+    y: -58.16132
+  }
+}
+instances {
+  id: "wall31"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 529.29285
+    y: -58.16132
+  }
+}
+instances {
+  id: "wall32"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 428.29282
+    y: -58.16132
+  }
+}
+instances {
+  id: "wall33"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 401.29282
+    y: -58.16132
+  }
+}
+instances {
+  id: "wall34"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 428.29282
+    y: -58.16132
+  }
+}
+instances {
+  id: "wall35"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 401.29282
+    y: -58.16132
+  }
+}
+instances {
+  id: "wall36"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 313.29282
+    y: -58.16132
+  }
+}
+instances {
+  id: "wall37"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 286.29282
+    y: -58.16132
+  }
+}
+instances {
+  id: "wall38"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 168.29282
+    y: -58.16132
+  }
+}
+instances {
+  id: "wall39"
+  prototype: "/main/maps/wall.go"
+  position {
+    x: 141.29282
+    y: -58.16132
+  }
+}
+instances {
+  id: "enemy"
+  prototype: "/main/enemies/enemy1.go"
+  position {
+    x: 380.519
+    y: 490.1228
+  }
+  rotation {
+    z: 0.002698119
+    w: -0.99999636
+  }
+}
+instances {
+  id: "enemy2"
+  prototype: "/main/enemies/enemy2.go"
+  position {
+    x: 128.1412
+    y: 98.1138
+  }
+  rotation {
+    z: -0.999996
+    w: -0.0028359112
   }
 }
 scale_along_z: 0
