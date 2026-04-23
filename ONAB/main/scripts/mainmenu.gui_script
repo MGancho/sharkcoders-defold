@@ -1,0 +1,24 @@
+local GameManager = require("main.scripts.GameManager")
+
+function init(self)
+	self.start_btn = gui.get_node("Play")
+	self.rank_btn = gui.get_node("Credits")
+	self.exit_btn = gui.get_node("Exit")
+	msg.post(".", "acquire_input_focus")
+end
+function on_input(self, action_id, action)
+	if action_id == hash("touch") and action.pressed then
+		if gui.pick_node(self.start_btn, action.x, action.y) then
+			print("start clicado")
+			msg.post("main:/SceneParent", "change_scene", {scene = "game"})
+		end
+		if gui.pick_node(self.rank_btn, action.x, action.y) then
+			print("credits clicado")
+			msg.post("main:/SceneParent", "change_scene", {scene = "credits"})
+		end
+		if gui.pick_node(self.exit_btn, action.x, action.y) then
+			print("exit clicado")
+			msg.post("main:/SceneParent", "change_scene", {scene = "exit"})
+		end
+	end
+end	

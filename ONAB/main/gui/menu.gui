@@ -1,0 +1,153 @@
+fonts {
+  name: "always_on_top"
+  font: "/builtins/fonts/debug/always_on_top.font"
+}
+nodes {
+  position {
+    x: 470.0
+    y: 419.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  color {
+    x: 0.4
+    y: 0.4
+    z: 0.4
+  }
+  type: TYPE_BOX
+  id: "title"
+  alpha: 0.0
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  scale {
+    x: 5.0
+    y: 5.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "One Night At Baldi\'s "
+  font: "always_on_top"
+  id: "Reversed world"
+  parent: "title"
+}
+nodes {
+  position {
+    x: 449.0
+    y: 162.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  color {
+    x: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "Game_start"
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -3.0
+    y: 3.0
+  }
+  scale {
+    x: 2.6
+    y: 2.6
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  color {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_TEXT
+  text: "Play"
+  font: "always_on_top"
+  id: "Play"
+  parent: "Game_start"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 195.0
+    y: 102.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  color {
+    x: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "credits"
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  scale {
+    x: 2.5
+    y: 2.4
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "Credits\n"
+  ""
+  font: "always_on_top"
+  id: "Credits"
+  parent: "credits"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 697.0
+    y: 100.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  color {
+    x: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "exit"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  scale {
+    x: 2.5
+    y: 2.5
+  }
+  size {
+    x: 201.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "Exit\n"
+  ""
+  font: "always_on_top"
+  id: "Exit"
+  parent: "exit"
+  inherit_alpha: true
+  shadow_alpha: 0.0
+  text_leading: 2.0
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

@@ -1,0 +1,22 @@
+name: "game"
+instances {
+  id: "office"
+  prototype: "/main/game objects/office.go"
+}
+instances {
+  id: "left door"
+  prototype: "/main/game objects/left door.go"
+  position {
+    x: -579.0
+    y: -41.0
+  }
+}
+instances {
+  id: "right door"
+  prototype: "/main/game objects/right door.go"
+  position {
+    x: 580.15265
+    y: -36.38786
+  }
+}
+scale_along_z: 0

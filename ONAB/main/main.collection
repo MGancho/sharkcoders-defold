@@ -1,0 +1,22 @@
+name: "main"
+scale_along_z: 0
+embedded_instances {
+  id: "SceneParent"
+  data: "components {\n"
+  "  id: \"SceneParent\"\n"
+  "  component: \"/main/scripts/SceneParent.script\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"menu\"\n"
+  "  type: \"collectionproxy\"\n"
+  "  data: \"collection: \\\"/main/menu.collection\\\"\\n"
+  "\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"game\"\n"
+  "  type: \"collectionproxy\"\n"
+  "  data: \"collection: \\\"/main/game.collection\\\"\\n"
+  "\"\n"
+  "}\n"
+  ""
+}

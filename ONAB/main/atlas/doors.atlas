@@ -1,0 +1,13 @@
+images {
+  image: "/main/assets and sprites/left door.png"
+}
+images {
+  image: "/main/assets and sprites/left door_shut.png"
+}
+images {
+  image: "/main/assets and sprites/right door.png"
+}
+images {
+  image: "/main/assets and sprites/right door_shut.png"
+}
+extrude_borders: 2

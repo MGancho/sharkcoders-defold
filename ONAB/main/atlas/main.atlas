@@ -1,0 +1,7 @@
+images {
+  image: "/main/assets and sprites/office.png"
+}
+images {
+  image: "/main/assets and sprites/left door.png"
+}
+extrude_borders: 2
