@@ -1,0 +1,21 @@
+function on_message(self, message_id, message)
+	if message_id == hash("update_energy") then
+		local pct = message.value / 100
+
+		-- Update a progress bar node
+		local bar = gui.get_node("energy_bar")
+		local full_width = 200  -- your bar's max width in pixels
+		gui.set_size(bar, vmath.vector3(full_width * pct, 20, 0))
+
+		-- Update a text label
+		local label = gui.get_node("energy_label")
+		gui.set_text(label, string.format("Energy: %d%%", math.floor(message.value)))
+
+		-- Turn bar red when low
+		if message.value < 20 then
+			gui.set_color(bar, vmath.vector4(1, 0.2, 0.2, 1))  -- red
+		else
+			gui.set_color(bar, vmath.vector4(0.2, 0.8, 0.2, 1))  -- green
+		end
+	end
+end

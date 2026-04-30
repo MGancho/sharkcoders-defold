@@ -1,0 +1,76 @@
+
+local door_sprites = {
+	left  = { open = "#left door",  closed = "left door_shut"  },
+	right = { open = "#right door", closed = "right door_shut" },
+}
+
+function init(self)
+	left_door = false
+	right_door = false
+	active_door = nil
+	msg.post(".", "acquire_input_focus")
+end
+local function set_door(side, closed)
+	if side == "left" then
+		url_id = "#left_door"
+	else
+		url_id = "#right_door"
+	end
+	anim = active_door
+	if closed then
+		anim = hash(door_sprites[side].closed)
+	else
+		anim = hash(door_sprites[side].open)
+	end
+
+	msg.post("/go_energy#energy", "door_state_changed", { closed = closed })
+	sprite.play_flipbook(url_id, anim)
+end
+
+local function open_active_door()
+	if active_door then
+		set_door(active_door, false)
+		active_door = nil
+	end
+end
+function is_door_closed(side)
+	return active_door == side
+end
+
+function on_input(self, action_id, action)
+	-- LEFT DOOR (A key)
+	if action_id == hash("door_left") then
+		if action.pressed then
+			if active_door == "right" then
+				open_active_door()       -- release the right door first
+			end
+			active_door = "left"
+			set_door("left", true)
+
+		elseif action.released then
+			if active_door == "left" then
+				open_active_door()
+			end
+		end
+	end
+
+	-- RIGHT DOOR (D key)
+	if action_id == hash("door_right") then
+		if action.pressed then
+			if active_door == "left" then
+				open_active_door()       -- release the left door first
+			end
+			active_door = "right"
+			set_door("right", true)
+
+		elseif action.released then
+			if active_door == "right" then
+				open_active_door()
+			end
+		end
+	end
+end
+-- Expose state so other systems (animatronics, power) can query it
+function is_door_closed(side)
+	return active_door == side
+end

@@ -7,7 +7,8 @@ function init(self)
 	msg.post(".", "acquire_input_focus")
 end
 function on_input(self, action_id, action)
-	if action_id == hash("touch") and action.pressed then
+	print("input recebido!", action_id)  
+	if action_id == hash("touch") and action.released then
 		if gui.pick_node(self.start_btn, action.x, action.y) then
 			print("start clicado")
 			msg.post("main:/SceneParent", "change_scene", {scene = "game"})

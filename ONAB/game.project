@@ -16,5 +16,5 @@ input_method = HiddenInputField
 scale_mode = stretch
 
 [project]
-title = My Project
+title = ONAB
 

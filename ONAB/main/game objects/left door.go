@@ -1,7 +1,11 @@
+components {
+  id: "doors"
+  component: "/main/scripts/doors.script"
+}
 embedded_components {
-  id: "sprite"
+  id: "left_door"
   type: "sprite"
-  data: "default_animation: \"left door\"\n"
+  data: "default_animation: \"Left_door\"\n"
   "material: \"/builtins/materials/sprite.material\"\n"
   "textures {\n"
   "  sampler: \"texture_sampler\"\n"

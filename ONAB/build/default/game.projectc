@@ -175,10 +175,9 @@ track_cpu = 0
 [project]
 compress_archive = 1
 minimum_log_level = 1
-title = My Project
+title = ONAB
 version = 1.0
 write_log = 0
-write_log_file = 0
 
 [render]
 clear_color_alpha = 1.0

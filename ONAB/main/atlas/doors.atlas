@@ -1,13 +1,29 @@
-images {
-  image: "/main/assets and sprites/left door.png"
+animations {
+  id: "Left_door"
+  images {
+    image: "/main/assets and sprites/left door.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
 }
-images {
-  image: "/main/assets and sprites/left door_shut.png"
+animations {
+  id: "Left_door_closed"
+  images {
+    image: "/main/assets and sprites/left door_shut.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
 }
-images {
-  image: "/main/assets and sprites/right door.png"
+animations {
+  id: "Right_door"
+  images {
+    image: "/main/assets and sprites/right door.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
 }
-images {
-  image: "/main/assets and sprites/right door_shut.png"
+animations {
+  id: "Right_door_closed"
+  images {
+    image: "/main/assets and sprites/right door_shut.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
 }
 extrude_borders: 2

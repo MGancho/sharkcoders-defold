@@ -1,0 +1,36 @@
+local M = {}
+
+local MAX_ENERGY = 100
+local energy = MAX_ENERGY
+
+	-- Drain rates (units per second)
+local DRAIN = {
+	idle = 0.5,   -- always draining
+	door = 1.5,   -- extra drain per closed door (only 1 possible, but easy to extend)
+}
+
+local door_closed = false  -- updated by messages from doors.script
+
+function init(self)
+	msg.post(".", "acquire_input_focus")
+	energy = MAX_ENERGY
+end
+
+function update(self, dt)
+	local drain = DRAIN.idle
+	if door_closed then drain = drain + DRAIN.door end
+
+	energy = math.max(0, energy - (drain * dt))
+
+	msg.post("/go_ui#ui", "update_energy", { value = energy })
+
+	if energy <= 0 then
+		msg.post("/go_game#game", "energy_out")  -- triggers Baldi's attack sequence
+	end
+end
+
+function on_message(self, message_id, message)
+	if message_id == hash("door_state_changed") then
+		door_closed = message.closed
+	end
+end

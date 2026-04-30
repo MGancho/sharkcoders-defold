@@ -19,4 +19,12 @@ instances {
     y: -36.38786
   }
 }
+instances {
+  id: "interface"
+  prototype: "/main/game objects/interface.go"
+  position {
+    x: -477.0
+    y: -323.0
+  }
+}
 scale_along_z: 0

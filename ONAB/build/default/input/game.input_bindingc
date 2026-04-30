@@ -1,1 +1,4 @@
-	touch
+
+ 	door_left
+#
+door_right	touch	touch	touch
